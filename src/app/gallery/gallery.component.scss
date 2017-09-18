@@ -1,0 +1,15 @@
+.actions{font-weight:bold;position:relative;margin-top:5px;background: #e9e9e9;padding:5px 5px 5px 5px;border-radius: 6px;margin-bottom:10px}
+.actions .closeIcon{position: absolute;right:5px;top:0px;font-size:22px}
+.actions .fa.fa-trash-o{margin-left:6px}
+.actions .closeIcon a{color:red;}
+
+.img-wrapper{position:relative}
+.img-wrapper a{color:#C3C3C3};
+.img-wrapper a:hover{color:#4285f4}
+.img-wrapper .check{position:absolute;top:7px;left:10px;font-size:26px;}
+.desc{margin-bottom:6px}
+
+
+@media(max-width:767px) {
+    .img-responsive{width: 100%}
+}

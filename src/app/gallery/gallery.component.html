@@ -1,0 +1,17 @@
+<div class="row">
+        
+            <div class="col-sm-3" *ngFor="let item of imagesList; let i = index">
+              <div class="img-wrapper"><a (mouseenter)="showheck($event,i)" (mouseleave)="showheck($event,i)" href="javascript:void(0)"><img class="img-responsive" src="data:image/png;base64,{{item.content}}">
+                    <div *ngIf="showCheck === i" class="check"><a title="Click for actions" href="javascript:void(0)" (click)="checkClicked(i)"><i class="fa fa-check-circle" aria-hidden="true"></i></a></div></a>
+            </div>
+              <div class="desc">{{item.desc}}</div>
+              <div *ngIf="show === i" class="actions">
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+    <a href="javascript:void(0)" (click)="editImage(i)">Edit</a>  <i class="fa fa-trash-o" aria-hidden="true"></i>
+    <a href="javascript:void(0)" (click)="delImage(i)">Delete</a><div class="closeIcon"><a id="aClose" (click)="closeActions()" href="javascript:void(0)"><i class="fa fa-times" aria-hidden="true"></i>
+    </a></div>
+                  </div>
+            </div>
+            
+          
+    </div>

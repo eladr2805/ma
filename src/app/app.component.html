@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row">
+<div class="header">
+    <h1><i class="fa fa-picture-o" aria-hidden="true"></i> Mutual Art gallery</h1>
+    <div class="add-photo"><a href="javascript:void(0)" (click)="showForm(true)"><i class="fa fa-plus" aria-hidden="true"></i></a></div>
+</div>
+  </div>
+
+</div>
+<div class="container">
+<div class="row">
+
+<div class="col-sm-12">
+  <div class="form-wrapper" *ngIf="isShowForm">
+  <form [formGroup]="imageForm">
+    <div><input [(ngModel)]='mfile' formControlName="fcFile" name="galImage" type="file" id="galImage"></div>
+  <div><input type="text" [(ngModel)]='mdesc' name="desc" maxlength="20" formControlName="fcDesc" placeholder="Description" id="desc">
+  <input type="hidden" [(ngModel)]='mIdx' name="idx" formControlName="fcIdx" id="idx" value="-1">
+  </div>
+  <div><button type="button" value="Save" (click)="saveImage()" class="btn btn-primary">{{btnText}}</button></div>
+  </form>
+<div class="close-form"><a href="javascript:void(0)" (click)="showForm(false)"><i class="fa fa-times" aria-hidden="true"></i>
+</a></div>
+  </div>
+</div>
+</div>
+
+<!--gallery images-->
+<app-gallery (onImageEdit)="onImageEdit($event)" (onImageDelete)="onImageDelete()"></app-gallery>
+
+</div>

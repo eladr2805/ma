@@ -1,0 +1,15 @@
+$flat-margin: 0px;
+$blue : #4285f4;
+$grey : #e9e9e9;
+
+h1 {margin:$flat-margin;color:#fff}
+.header{position:relative;background:$blue;padding:10px 10px 10px 10px;border-bottom:1px solid #000;margin-bottom:15px}
+.header h1{font-size:28px;font-weight:700;}
+.header .add-photo{position:absolute;right:40px;top:10px;font-size:28px;color:#fff}
+
+form div{margin-bottom: 10px}
+.form-wrapper{background:$grey;padding:10px 10px 10px 10px;margin-bottom:10px;border:1px solid #C0C0C0;position: relative}
+.form-wrapper .close-form{ position: absolute; top: 3px;  right: 5px; font-size: 24px;}
+
+.add-photo a{color:#fff}
+.add-photo a:hover{color:white;opacity :0.8}
